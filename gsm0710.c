@@ -1494,7 +1494,6 @@ int main(int argc, char *argv[], char *env[])
 	//DAEMONIZE
 	//SHOW TIME
 	parent_pid = getpid();
-	daemonize(_debug);
 	//The Hell is from now-one
 
     /* SIGNALS treatment*/

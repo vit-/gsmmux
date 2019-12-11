@@ -8,16 +8,16 @@ Introduction
 
   This driver is based on the work of Tuukka Karvonen, (see
   README.orig) and has been modified to work with pseudo-tty's
-  instead. This is far from complete. Please refer to README.orig for 
+  instead. This is far from complete. Please refer to README.orig for
   more information about the GSM07.10 implementation. The driver is
   known to work with the following modems:
 
-  - Sony-Ericsson GM29 
+  - Sony-Ericsson GM29
   - Siemens MC35
   - Siemens MC35i
   - Siemens MC75
   - iRZ MC52iT
-  - Sony-Ericsson GM47/GM48 (not tested with the most recent version of 
+  - Sony-Ericsson GM47/GM48 (not tested with the most recent version of
                              the driver)
 
 Instructions for Use
@@ -28,11 +28,11 @@ Instructions for Use
   options:
     -p <serport>        : Serial port device to connect to [/dev/modem]
     -f <framsize>       : Maximum frame size [32]
-    -d                  : Debug mode, don't fork
+    -d                  : Enable debug logging
     -m <modem>          : Modem (mc35, mc75, generic, ...)
     -b <baudrate>       : MUX mode baudrate (0,9600,14400, ...)
     -P <PIN-code>       : PIN code to fed to the modem
-    -s <symlink-prefix> : Prefix for the symlinks of slave devices 
+    -s <symlink-prefix> : Prefix for the symlinks of slave devices
                           (e.g./dev/mux)
     -w                  : Wait for deamon startup success/failure
     -h                  : Show this help message
@@ -58,12 +58,12 @@ INSTALLATION
 
   To make the daemon start at system boot:
   1. Copy gsmMuxd to /usr/sbin/
-  2. Copy the file "mux.d" to /etc/init.d/. 
+  2. Copy the file "mux.d" to /etc/init.d/.
   3. Edit the OPTIONS line of the copied file
   3. Run chkconfig --add mux.d
 
-  If you have more than one modem you will need to 
-  create a copy of the daemon executable with a different 
+  If you have more than one modem you will need to
+  create a copy of the daemon executable with a different
   name and create another init script to /etc/init.d/.
 
   Note that installation varies on different systems. The steps above
